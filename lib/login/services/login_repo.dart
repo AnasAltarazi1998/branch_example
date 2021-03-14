@@ -12,8 +12,8 @@ abstract class LoginRepo {
 class LoginRepoImp extends LoginRepo {
   @override
   static Future<login_model> signin(String name, String password) async {
-    var response =
-        await http.get(LoginConst.login_url(name: name, password: password));
+    var response = await http
+        .get(Uri.parse(LoginConst.login_url(name: name, password: password)));
     if (response.statusCode == 200) {
       var data = json.decode(response.body);
       login_model res = login_model.fromJson(data);
