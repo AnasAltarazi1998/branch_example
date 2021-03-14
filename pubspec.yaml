@@ -23,6 +23,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_bloc: 
+  http:
+  equatable:
+  get:
 
   flutter_bloc: 
   http:
